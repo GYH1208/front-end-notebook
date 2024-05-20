@@ -82,3 +82,48 @@ function* demo(){
 
 - 调用遍历器对象的next方法并输出，注意先执行表达式语句“worold” + (yield)，得到{value: 123, done: false}，再输出： **“world undefined”。**  注意直接输出yield表达式得到的结果是undefined，必须使用遍历器对象的next方法才能获取yield表达式后面的值
 - 调用遍历器对象的next方法，因为后面已经没有yield表达式，虽然没有return语句，判断依据是否有更多的yield语句为标准，还是输出 **{value: undefined, done: true}**
+
+### JQuery
+JQuery是一个快速、简洁的JavaScript框架，它 simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development.
+
+JQuery 允许通过CSS选择器来选取元素。
+
+```javascript
+function myFunction()
+{
+    var obj = document.getElementById("h01");
+    obj.innerHTML = "Hello World!";
+}
+
+onload = myFunction;;
+```
+**等价的JQuery代码如下：**
+
+```javascript
+function myFunction()
+{
+    $("#h01").html("Hello World!")
+}
+
+$(document).ready(myFunction);
+```
+### $.ajax 方法
+```javascript
+$.ajax({
+    url: "/user/login",
+    type: "get",
+    data:{
+        username: "admin",
+        password: "123456"
+    },
+    dataType: "text",
+
+    success: function(response){
+        alert(response);
+    },
+
+    error: function(response){
+        alert(response);
+    }
+});
+```
