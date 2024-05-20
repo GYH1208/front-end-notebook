@@ -127,3 +127,13 @@ $.ajax({
     }
 });
 ```
+
+### 测试Prototype
+Prototype提供给的还能输可以使HTML DOM 编程更容易，与 JQuery 相比，Prototype 具有更高的灵活性。与JQuery 不同，Prototype 没有用一取代window.onload()的ready()方法。
+
+```javascript
+function myFunction(){
+    $("h01").insert("Hello World!")
+}
+Event.observe(window,"load",myFunction);
+```
