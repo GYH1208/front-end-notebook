@@ -305,3 +305,100 @@ app.mount('#app')
 ### Vue 混入
 混入（Mixin）是一种扩展组件选项的机制。通过混入，可以将多个组件选项合并为一个，使得代码更加灵活。
 
+### Ajax(axios)
+ajax 是一个基于Promise的HTTP客户端，可以用来发送HTTP请求, 可以用在浏览器和node 中。
+
+**使用方法**
+```javascript
+Vue.axios.get(api).then((response) => {
+  console.log(response.data)
+})
+
+this.axios.get(api).then((response) => {
+  console.log(response.data)
+})
+
+this.$http.get(api).then((response) => {
+  console.log(response.data)
+})
+```
+
+**GET 实例**
+```javascript
+const app = {
+  data() {
+    return {
+      info: 'Ajax 测试!!'
+    }
+  },
+  mounted () {
+    axios
+      .get('https://www.runoob.com/try/ajax/json_demo.json')
+      .then(response => (this.info = response))
+      .catch(function (error) { // 请求失败处理
+        console.log(error);
+    });
+  }
+}
+ 
+Vue.createApp(app).mount('#app')
+```
+可以进一步通过response.data 获取服务器返回的JSON数据。
+
+**实例**
+```html
+<div id="app">
+  <h1>网站列表</h1>
+  <div
+    v-for="site in info"
+  >
+    {{ site.name }}
+  </div>
+</div>
+<script type = "text/javascript">
+const app = {
+  data() {
+    return {
+      info: 'Ajax 测试!!'
+    }
+  },
+  mounted () {
+    axios
+      .get('https://www.runoob.com/try/ajax/json_demo.json')
+      .then(response => (this.info = response.data.sites))
+      .catch(function (error) { // 请求失败处理
+        console.log(error);
+    });
+  }
+}
+ 
+Vue.createApp(app).mount('#app')
+</script>
+```
+
+### axios API
+可以通过向 axios 传递相关配置来创建请求
+```javascript
+axios(config)
+// 发送 POST 请求
+axios({
+  method: 'post',
+  url: '/user/12345',
+  data: {
+    firstName: 'Fred',
+    lastName: 'Flintstone'
+  }
+});
+//  GET 请求远程图片
+axios({
+  method:'get',
+  url:'http://bit.ly/2mTM3nY',
+  responseType:'stream'
+})
+  .then(function(response) {
+  response.data.pipe(fs.createWriteStream('ada_lovelace.jpg'))
+});
+axios(url[, config])
+// 发送 GET 请求（默认的方法）
+axios('/user/12345');
+```
