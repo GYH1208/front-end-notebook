@@ -137,3 +137,13 @@ function myFunction(){
 }
 Event.observe(window,"load",myFunction);
 ```
+### cookie
+Javascript 可以使用document.cookie来创建，读取，及删除cookie.
+
+```javascript 
+documet.cookie = "username = John Doe";
+```
+还可以给cookie添加过期时间：
+```javascript 
+document.cookie = "username = John Doe; expires = Thu, 18 Dec 2013 12:00:00 UTC";
+```
