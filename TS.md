@@ -1,5 +1,11 @@
 # TypeScript 学习笔记
-TypeScript 是 JavaScript 的超集，它是一种静态类型语言，可以编译成纯 JavaScript 代码。TypeScript 与 JavaScript 的关系类似于 C++ 和 Java 的关系。TypeScript 增加了类型系统，可以帮助开发者更好地理解代码，提高代码的可维护性和可靠性。
+- TypeScript 是 JavaScript 的超集，它是一种静态类型语言，可以编译成纯 JavaScript 代码。TypeScript 与 JavaScript 的关系类似于 C++ 和 Java 的关系。TypeScript 增加了类型系统，可以帮助开发者更好地理解代码，提高代码的可维护性和可靠性。
+- Typescript 在运行之前需要先编译为javascript，在编译阶段会进行类型检查，所以typescript是静态类型。
+- Typescript 使用编译上下文来给文件分组，告诉typescript哪些文件是有效的，哪些是无效的。default是默认的编译上下文，其他的编译上下文可以自定义。
+- Typescript 编译器可以输出为纯javascript文件，也可以输出为.js.map文件，.js.map文件可以帮助调试器映射到typescript代码。
+- Typescript 编译器可以编译为ES5、ES6、ES7等版本的javascript。
+- Typescript 编译器可以编译为AMD、CommonJS、SystemJS、UMD等模块化规范。
+- Typescript 编译器可以编译为.d.ts文件，.d.ts文件可以帮助IDE提供代码提示。
 
 ```typescript
 const hello: string = "Hello, TypeScript!";
