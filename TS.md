@@ -75,3 +75,22 @@ console.log(employee.lastName)
 ```
 接口/类的继承模式与java类似，可以实现多接口的继承。
     
+
+### 元组
+元组（tuple）是一个类型化数组，每个索引都有预定义的长度和类型。元组允许数组中的每个元素都是知己类型的值。
+
+```typescript
+//定义元组
+let ourTuple:[number, boolen, string]
+//正确初始化
+outTuple = [6,false,"hello"]
+```
+
+```typescript
+let ourTuple: [number, boolean, string] = [6, false, 'I.O']
+ 
+// 索引 3 的元组中没有类型安全性
+ourTuple.push('O.O')
+console.log(ourTuple) // [6, false, 'I.O', 'O.O']           
+```
+
