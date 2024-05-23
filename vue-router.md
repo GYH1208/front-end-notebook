@@ -14,3 +14,4 @@ hash就是URL中#后面的内容，改变hash值，页面就会发生变化，ha
 2. history 模式
 - history 是历史对象，存放当前的文档页面的回话历史记录（不是浏览器的所有历史记录）。
 - popstate 事件：当state变化触发是，在事件中获取当前的url地址。pushstate,replaceState 方法并不会出发popstate 事件。
+- 点击事件：绑定导航按钮的click事件，pushState 可以更新url.
