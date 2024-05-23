@@ -93,4 +93,20 @@ let ourTuple: [number, boolean, string] = [6, false, 'I.O']
 ourTuple.push('O.O')
 console.log(ourTuple) // [6, false, 'I.O', 'O.O']           
 ```
+### 约束类型，减少不必要的代码逻辑
+Typescript 支持类型最大的好处是可读性。 类型可以给开发者更多的信息，是最有价值的文档。类型很好的体现了代码即文档这一思想。
+```typescript
+fuction sum(x,y){
+    if(typeof x != 'number'){
+        x = pareseInt(x);
+    }
+    return x + y;
+};
 
+//TS的方式，直接约束了类型
+function suum2(x:number, y:number){
+    return x+y;
+};
+```
+
+ 
