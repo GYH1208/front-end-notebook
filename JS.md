@@ -110,6 +110,7 @@ $(document).ready(myFunction);
 ### $.ajax 方法
 - $.ajax()方法是JQuery提供的用来处理异步请求的函数。它可以用来发送HTTP请求，并接收服务器的响应。
 - ajax 在不重新加载整个页面的情况下可以完成更新部分网页，交换数据。
+
 ```javascript
 $.ajax({
     url: "/user/login",
