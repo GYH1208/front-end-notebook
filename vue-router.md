@@ -94,3 +94,4 @@ let u2 = {path:'/user/:id/:type',conponent:UserBox}
 
 - router-link: 用来定义路由链接，可以绑定到路由的path属性上，当点击时，会触发路由切换。
 - router-view: 用来显示当前路由匹配到的组件，当路由切换时，会自动匹配组件并显示。
+

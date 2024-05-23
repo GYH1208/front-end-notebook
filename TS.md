@@ -127,5 +127,13 @@ var q:Person = new Teacher();
 
 q.eat(); // 456
 ```
+### Typescript 模块
+模块的设计理念是可以更换的组织代码，模块在其吱声的作用域里面运行，而不是在全局作域，导出模块使用export关键字。
+```typescript
+export interface SomeInterface{
+
+}
+```
+导入导出同于javascript
 
  
