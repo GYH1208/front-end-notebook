@@ -109,4 +109,23 @@ function suum2(x:number, y:number){
 };
 ```
 
+### TS 也是面对对象的语言，也是可以实现java 中的多态的。
+```typescript
+class Person{
+    eat():void{
+        consol.log("123");
+    }
+}
+
+class Teacher extends Person{
+    eat():void{
+        console.log("456");
+    }
+}
+
+var q:Person = new Teacher();
+
+q.eat(); // 456
+```
+
  
