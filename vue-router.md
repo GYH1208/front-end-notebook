@@ -109,3 +109,32 @@ const router = new VueRouter({
 })
 ```
 当hash 为/的时候就默认跳到home组件，防止hash为/的时候没什么可以显示。
+
+### 动态路由
+动态路由指的是吧hash 地址中可变的部分定义为参数项，从而提高路由的复用性。语法中应用冒号： 来定义参数项。
+```javascript
+{path:'/user/:id',component:UserBox}
+```
+
+ ### $route.params 参数对象
+ 在动态路由渲染出来的组件中，可以使用this.$riyte.params 对象访问到动态匹配的参数值，在template 中不可加this，只能用$route.params。
+
+ ### 使用props 传递参数
+ 在动态路由中，可以通过props 传递参数，在组件中通过props 接收参数。
+
+
+```javascript
+// 路由配置
+{path:'/user/:id',component:Movie,props:true}
+
+<template>
+    <h3>MyMovie组件 -- {{id}}</h3>
+</template>
+
+<script>
+    export default {
+        props:['id']
+    }
+</script>
+
+```
