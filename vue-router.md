@@ -95,3 +95,17 @@ let u2 = {path:'/user/:id/:type',conponent:UserBox}
 - router-link: 用来定义路由链接，可以绑定到路由的path属性上，当点击时，会触发路由切换。
 - router-view: 用来显示当前路由匹配到的组件，当路由切换时，会自动匹配组件并显示。
 
+### vue-router 常见用法
+路由重定向指的是：用户在访问地址A的时候，强制用户跳转到地址B，从而展示特定的页面。通过路由规则的redirect属性，指定一个新的路由地址，可以很方便的设置路由的重定向。
+
+```javascript
+const router = new VueRouter({
+    routes:[
+        {path:'/',redirect:'/home'},
+        {path:'/home',component: Home},
+        {path:'/movie',component: Movie},
+        {path:'/about',component: About}
+    ]
+})
+```
+当hash 为/的时候就默认跳到home组件，防止hash为/的时候没什么可以显示。
